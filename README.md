@@ -28,4 +28,34 @@ In between the \<a> tag, put a list of \<img> tag with `src`, `data-href`(the hr
     <img src="image/5.png" alt="" data-href="href5" data-caption="5"/>
 </a>
 ```
+###Initialization
+All you need to do is call the plugin inside a `$(document).ready` function:
+```javascript
+$(document).ready(function() {
+        $('.test').iconbox();
+    });
+```
+A more complex initialization with all options set could look like this:
+```javascript
+$(document).ready(function() {
+        $('.test').iconbox({
+            asize: "60",                        //box size
+            acolumn: "3",                       //box column
+            abgcolor: "rgba(0, 0, 0, .1)",      //box bg color
+            popbgcolor: "rgba(0, 0, 0, .9)",    //pop bg color
+            popheight: "300",                   //pop max height
+            popiconsize: "48",                  //pop icon size
+            popcolumn: "3",                     //pop column
+            popupcontainer: ".popup-container"  //pop container class or id
+        });
+    });
+```
 #Options
+* `asize`: the \<a> element size(px), in other words, the box size.
+* `acolumn`: to define how many columns of the box has.
+* `abgcolor`: the background color of the box.
+* `popbgcolor`: the background color of the pop up container.
+* `popheidht`: the height of the icon list in the pop up container.
+* `popiconsize`: the icon size in the pop up container.
+* `popcolumn`: to define how many columns of the pop up container has.
+* `popupcontainer`: pop container class or id, `class="popup-container"` by default
