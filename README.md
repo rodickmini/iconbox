@@ -1,5 +1,3 @@
-iconbox
-===================================
 #Introduction
 This is a jquery plugin to simulate the folder effect of the mobile desk.<br/>
 The icon box contains some certain icons of \<a> tag.<br/>
