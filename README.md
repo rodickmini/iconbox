@@ -59,7 +59,7 @@ $(document).ready(function() {
 * `popiconsize`: the icon size in the pop up container.
 * `popcolumn`: to define how many columns of the pop up container has.
 * `popupcontainer`: pop container class or id, `class="popup-container"` by default
-* 
+
 #Licence
 (The MIT License)<br/>
 <br/>
