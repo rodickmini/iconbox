@@ -2,20 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>    <title></title>
 </head>
 <body>
 <a class="test" data-folder-name="FolderName" style="display: none;">
     <img src="image/1.png" alt="" data-href="href1" data-caption="1"/>
     <img src="image/2.png" alt="" data-href="href2" data-caption="2"/>
-    <img src="image/3.png" alt="" data-href="href3" data-caption="3"/>
-    <img src="image/4.png" alt="" data-href="href4" data-caption="4"/>
-    <img src="image/5.png" alt="" data-href="href5" data-caption="5"/>
 </a>
 </body>
 <script src="../jquery-2.1.1.min.js"></script>
-<script src="../jquery-iconbox.min.js"></script>
+<script src="../jquery-iconbox.js"></script>
 <script>
-    $('.test').iconbox();
+    $(document).ready(function() {
+        $('.test').iconbox({
+            asize: "60",                        //box size
+            acolumn: "3",                       //box column
+            abgcolor: "rgba(0, 0, 0, .1)",      //box bg color
+            popbgcolor: "rgba(0, 0, 0, .9)",    //pop bg color
+            popheight: "300",                   //pop max height
+            popiconsize: "48",                  //pop icon size
+            popcolumn: "3",                     //pop column
+            popupcontainer: ".popup-container"  //pop container class or id
+        });
+    });
+
 </script>
 </html>
