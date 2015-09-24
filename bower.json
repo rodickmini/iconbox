@@ -1,0 +1,17 @@
+{
+  "name": "iconbox",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rodickmini/iconbox",
+  "authors": [
+    "rodickmini <rodickcai@gmail.com>"
+  ],
+  "description": "iconbox plugin by rodickcai, put icons in a box and click to pop up",
+  "main": "jquery-iconbox.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "requirejs": "~2.1.20"
+  }
+}
