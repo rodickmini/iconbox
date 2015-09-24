@@ -7,6 +7,14 @@ By click or tap the box, an overlay pops up to display the full details in the b
 ![](https://github.com/rodickmini/iconbox/raw/master/examples/image/after.jpg)
 #Usage
 As you can see in the example files, you will need to include:<br/>
+###Bower install
+```html
+$ bower install
+```
+###NPM install
+```html
+$ npm install
+```
 * jQuery library. (1.6.0 minimum)
 * The JavaScript file jquery.iconbox.js (or its minified version jquery.iconbox.min.js)
 ###Including files:
