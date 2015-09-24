@@ -1,7 +1,37 @@
 /**
  * Created by rodick on 15-6-2.
  */
-(function ( $ ) {
+
+!function(root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else {
+        factory(root.jQuery);
+    }
+}(this, function($) {
+    'use strict';
+
+    // Default options
+    var defaults = {
+
+    };
+
+    // Constructor, initialise everything you need here
+    var Plugin = function(element, options) {
+        this.element = element;
+        this.options = options;
+    };
+
+    // Plugin methods and shared properties
+    Plugin.prototype = {
+        // Reset constructor - http://goo.gl/EcWdiy
+        constructor: Plugin,
+
+        someMethod: function() {
+
+        }
+    };
+
     $.fn.iconbox = function( options ) {
         var settings = $.extend({
             asize: "48",                        //box size
@@ -40,19 +70,19 @@
         if(classOrId === '.') {
             popupContainer =
                 "<div class='" + theRest + "'>" +
-                    "<div class='popup-icon-container'>" +
-                    "<div class='folder-title'></div>" +
-                    "<ul class='popup-app-list'></ul>" +
-                    "</div>" +
-                    "</div>";
+                "<div class='popup-icon-container'>" +
+                "<div class='folder-title'></div>" +
+                "<ul class='popup-app-list'></ul>" +
+                "</div>" +
+                "</div>";
         }else if(classOrId === '#') {
             popupContainer =
                 "<div id='" + theRest + "'>" +
-                    "<div class='popup-icon-container'>" +
-                    "<div class='folder-title'></div>" +
-                    "<ul class='popup-app-list'></ul>" +
-                    "</div>" +
-                    "</div>";
+                "<div class='popup-icon-container'>" +
+                "<div class='folder-title'></div>" +
+                "<ul class='popup-app-list'></ul>" +
+                "</div>" +
+                "</div>";
         }
 
         $("body").append(popupContainer);
@@ -146,4 +176,7 @@
         $(popupContainer).show();
     };
 
-}( jQuery ));
+    // Expose defaults and Constructor (allowing overriding of prototype methods for example)
+    $.fn.iconbox.defaults = defaults;
+    $.fn.iconbox.Plugin = Plugin;
+});
