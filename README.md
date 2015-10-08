@@ -6,7 +6,7 @@ By click or tap the box, an overlay pops up to display the full details in the b
 ![](https://github.com/rodickmini/iconbox/raw/master/examples/image/before.jpg)
 ![](https://github.com/rodickmini/iconbox/raw/master/examples/image/after.jpg)
 #Usage
-As you can see in the example files, you will need to include:<br/>
+As you can see in the example files, you will need to do as following:<br/>
 ###Bower install
 ```html
 $ bower install
